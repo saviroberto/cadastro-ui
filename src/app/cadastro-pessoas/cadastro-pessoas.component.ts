@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormControl, FormGroup } from '@angular/forms';
+import { ConfigService } from 'src/app/config.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
     selector: 'app-cadastro-pessoas',
@@ -71,39 +73,29 @@ export class CadastroPessoasComponent implements OnInit {
 
     });
 
-    constructor() { }
-
+    constructor(private http: HttpClient) { }
 
     ngOnInit() {
     }
 
     cadastrar() {
-        alert(this.nome.value);
-        alert(this.socorrista.value);
-        alert(this.rg.value);
-        alert(this.graduacao.value);
-        alert(this.nomeDeGuerra.value);
-        alert(this.modeloCapa.value);
-        alert(this.condicaoCapa.value);
-        alert(this.tamanhoCapaQueTem.value);
-        alert(this.tamanhoCapaQueUsa.value);
-        alert(this.modeloCalca.value);
-        alert(this.condicaoCalca.value);
-        alert(this.tamanhoCalcaQueTem.value);
-        alert(this.tamanhoCalcaQueUsa.value);
-        alert(this.modeloBota.value);
-        alert(this.condicaoBota.value);
-        alert(this.tamanhoBotaQueTem.value);
-        alert(this.tamanhoBotaQueUsa.value);
-        alert(this.modeloCapacete.value);
-        alert(this.condicaoCapacete.value);
-        alert(this.numeroCapacete.value);
-        alert(this.modeluva.value);
-        alert(this.condicaoLuva.value);
-        alert(this.tamanhoLuva.value);
-        alert(this.condicaoBalaclava.value);
-        alert(this.condicaoLuvaVaqueta.value);
-        alert(this.tamanhoLuvaVaqueta.value);
-        alert(this.condicaoOculosProtecao.value);
+        alert('teste1');
+        this.http.post<string>('http://localhost:8080/bombeiros/pessoa', 'teste').subscribe(
+            data => {
+                console.log("POST Request is successful ", data);
+            },
+            error => {
+
+                console.log("Error", error);
+
+            });
+        alert('teste2');
     }
 }
+
+const httpOptions = {
+    headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};

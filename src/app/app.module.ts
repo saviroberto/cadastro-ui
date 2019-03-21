@@ -4,6 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -53,6 +54,7 @@ import { CadastroPessoasComponent } from './cadastro-pessoas/cadastro-pessoas.co
     CadastroPessoasComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
