@@ -8,7 +8,7 @@ import { NgForm, FormControl, FormGroup } from '@angular/forms';
 })
 export class CadastroPessoasComponent implements OnInit {
 
-    nomePessoa = new FormControl('');
+    nome = new FormControl('');
     sexo = new FormControl('');
     socorrista = new FormControl('');
     rg = new FormControl('');
@@ -40,7 +40,7 @@ export class CadastroPessoasComponent implements OnInit {
 
     form = new FormGroup({
 
-        nomePessoa: this.nomePessoa,
+        nome: this.nome,
         sexo: this.sexo,
         socorrista: this.socorrista,
         rg: this.rg,
