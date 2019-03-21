@@ -1,0 +1,296 @@
+<form [formGroup]="form">
+  <div class="container">
+
+    <div class="row" style="text-align: center">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: lightgray">
+        <p>Dados Pessoais</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: lightslategray">
+        <!-- nome -->
+        <div class="form-group ">
+          <label>Nome: </label>
+          <input class="form-control" name="nome" [formControl]="nomePessoa" required />
+
+          <!-- sexo -->
+          <label>Sexo: </label><br /> &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" class="form-check-input" formControlName="sexo" id="sexo" name="sexo" value="F" required>
+          <label class="form-check-label" for="sexo"></label> Feminino <br /> &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" class="form-check-input" formControlName="sexo" id="sexo" name="sexo" value="M" required>
+          <label class="form-check-label" for="sexo"></label> Masculino
+          <br />
+
+          <!-- flag Socorrista -->
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="checkbox" class="form-check-input" id="socorrista" name="socorrista" [formControl]="socorrista" required>
+          <label class="form-check-label" for="sexo"></label> Socorrista<br />
+
+          <!-- RG -->
+          <label>RG: </label>
+          <input class="form-control" name="rg" [formControl]="rg" required>
+
+          <!-- Graduacao -->
+          <label>Graduacao: </label>
+          <select class="form-control" name="graduacao" [formControl]="graduacao" required>
+            <option>Cel.</option>
+            <option>Ten.-Cel.</option>
+            <option>Maj.</option>
+            <option>Cap.</option>
+            <option>1° Ten.</option>
+            <option>2° Ten.</option>
+            <option>Sub-Ten.</option>
+            <option>1° Sgt.</option>
+            <option>2° Sgt.</option>
+            <option>3° Sgt.</option>
+            <option>Cb.</option>
+            <option>Sd.</option>
+          </select>
+
+          <!-- Nome de Guerra -->
+          <label>Nome de Guerra: </label>
+          <input class="form-control" name="nomeDeGuerra" [formControl]="nomeDeGuerra" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: lightgray; text-align: center;  ">
+        <p> EPIs CI </p>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: lightslategray">
+        <!-- Capa -->
+        <div class="form-group">
+          <p>Capa: </p>
+          <!-- Modelo -->
+          <label>Modelo:</label>
+          <select class="form-control" name="modeloCapa" [formControl]="modeloCapa" required>
+            <option>Tipo 1</option>
+            <option>Tipo 2</option>
+            <option>Tipo 3</option>
+          </select>
+          <!-- Condicao -->
+          <label>Condicao:</label>
+          <select class="form-control" name="condicaoCapa" [formControl]="condicaoCapa" required>
+            <option>Nao tem</option>
+            <option>Nova</option>
+            <option>Meia vida</option>
+            <option>Velha</option>
+          </select>
+          <!-- Tamanho que tem -->
+          <label>Tamanho que tem:</label>
+          <select class="form-control" name="tamanhoCapaQueTem" [formControl]="tamanhoCapaQueTem" required>
+            <option>P</option>
+            <option>M</option>
+            <option>G</option>
+            <option>XG</option>
+          </select>
+          <!-- Tamanho que usa -->
+          <label>Tamanho que usa:</label>
+          <select class="form-control" name="tamanhoCapaQueUsa" [formControl]="tamanhoCapaQueUsa" required>
+            <option>P</option>
+            <option>M</option>
+            <option>G</option>
+            <option>XG</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: lightgray">
+        <!-- Calca -->
+        <div class="form-group">
+          <p>Calca:</p>
+
+          <!-- Modelo -->
+          <label>Modelo:</label>
+          <select class="form-control" name="modeloCalca" [formControl]="modeloCalca" required>
+            <option>Tipo 1</option>
+            <option>Tipo 2</option>
+            <option>Tipo 3</option>
+          </select>
+
+          <!-- Condicao -->
+          <label>Condicao:</label>
+          <select class="form-control" name="condicaoCalca" [formControl]="condicaoCalca" required>
+            <option>Nao tem</option>
+            <option>Nova</option>
+            <option>Meia vida</option>
+            <option>Velha</option>
+          </select>
+
+          <!-- Tamanho que tem -->
+          <label>Tamanho que tem:</label>
+          <select class="form-control" name="tamanhoCalcaQueTem" [formControl]="tamanhoCalcaQueTem" required>
+            <option>P</option>
+            <option>M</option>
+            <option>G</option>
+            <option>XG</option>
+          </select>
+
+          <!-- Tamanho que usa-->
+          <label>Tamanho que usa:</label>
+          <select class="form-control" name="tamanhoCalcaQueUsa" [formControl]="tamanhoCalcaQueUsa" required>
+            <option>P</option>
+            <option>M</option>
+            <option>G</option>
+            <option>XG</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: lightslategray">
+
+        <!-- Bota -->
+        <div class="form-group">
+          <p>Bota:</p>
+          <!-- Modelo -->
+          <label>Modelo:</label>
+          <select class="form-control" name="modeloBota" [formControl]="modeloBota" required>
+            <option>Tipo 1</option>
+            <option>Tipo 2</option>
+            <option>Tipo 3</option>
+            <option>Tipo 4</option>
+          </select>
+
+          <!-- Condicao -->
+          <label>Condicao:</label>
+          <select class="form-control" name="condicaoBota" [formControl]="condicaoBota" required>
+            <option>Nao tem</option>
+            <option>Nova</option>
+            <option>Meia vida</option>
+            <option>Velha</option>
+          </select>
+
+          <!-- Tamanho que tem -->
+          <label>Tamanho que tem:</label>
+          <input type="number" class="form-control" name="tamanhoBotaQueTem" required min="30" max="50" [formControl]="tamanhoBotaQueTem"
+          />
+
+          <!-- Tamanho que usa -->
+          <label>Tamanho que usa:</label>
+          <input type="number" class="form-control" name="tamanhoBotaQueUsa" required min="30" max="50" [formControl]="tamanhoBotaQueUsa"
+          />
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: lightgray">
+        <!-- Capacete -->
+        <div class="form-group">
+          <p>Capacete: </p>
+          <!-- Modelo -->
+          <label>Modelo:</label>
+          <select class="form-control" name="modeloCapacete" [formControl]="modeloCapacete" required>
+            <option>Niquelado F1</option>
+            <option>Niquelado F1X1</option>
+            <option>Amarelo F1</option>
+            <option>Amarelo F1X1</option>
+            <option>Branco F1</option>
+            <option>Branco F1X1</option>
+          </select>
+
+          <!-- Condicao -->
+          <label>Condicao:</label>
+          <select class="form-control" name="condicaoCapacete" [formControl]="condicaoCapacete" required>
+            <option>Nao tem</option>
+            <option>Nova</option>
+            <option>Meia vida</option>
+            <option>Velha</option>
+          </select>
+
+          <!-- Numero -->
+          <label>Numero</label>
+          <input type="number" class="form-control" name="numeroCapacete" [formControl]="numeroCapacete" required />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: lightgray">
+        <!-- Luva CI -->
+        <div class="form-group">
+          <p>Luva CI: </p>
+
+          <!-- Modelo -->
+          <label>Modelo:</label>
+          <select class="form-control" name="modeluva" [formControl]="modeluva" required>
+            <option>Branco</option>
+            <option>Preto</option>
+          </select>
+
+          <!-- Condicao -->
+          <label>Condicao:</label>
+          <select class="form-control" name="condicaoLuva" [formControl]="condicaoLuva" required>
+            <option>Nao tem</option>
+            <option>Nova</option>
+            <option>Meia vida</option>
+            <option>Velha</option>
+          </select>
+
+          <!-- Tamanho -->
+          <label>Tamanho</label>
+          <input type="number" class="form-control" name="tamanhoLuva" [formControl]="tamanhoLuva" required min="7" max="12" />
+        </div>
+
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: lightslategray">
+        <!-- Balaclava -->
+        <div class="form-group">
+          <p>Balaclava: </p>
+
+          <!-- Condicao -->
+          <label>Condicao:</label>
+          <select class="form-control" name="condicaoBalaclava" [formControl]="condicaoBalaclava" required>
+            <option>Nao tem</option>
+            <option>Nova</option>
+            <option>Meia vida</option>
+            <option>Velha</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: lightgray">
+        <!-- Luva vaqueta -->
+        <div class="form-group">
+          <p>Luva vaqueta: </p>
+
+          <!-- Condicao -->
+          <label>Condicao:</label>
+          <select class="form-control" name="condicaoLuvaVaqueta" [formControl]="condicaoLuvaVaqueta" required>
+            <option>Nao tem</option>
+            <option>Nova</option>
+            <option>Meia vida</option>
+            <option>Velha</option>
+          </select>
+
+          <!-- Tamanho -->
+          <label>Tamanho</label>
+          <input type="number" class="form-control" name="tamanhoLuvaVaqueta" [formControl]="tamanhoLuvaVaqueta" required min="7" max="12"
+          />
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: lightslategray">
+        <!-- Oculos de protecao -->
+        <div class="form-group">
+          <p>Oculos protecao: </p>
+
+          <!-- Condicao -->
+          <select class="form-control" name="condicaoOculosProtecao" [formControl]="condicaoOculosProtecao" required>
+            <option>Nao tem</option>
+            <option>Nova</option>
+            <option>Meia vida</option>
+            <option>Velha</option>
+          </select>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Submter -->
+  <div class="text-right">
+    <button class="btn btn-primary" (click)="cadastrar()"> Submit</button>
+  </div>
+
+</form>

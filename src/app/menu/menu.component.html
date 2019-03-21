@@ -1,0 +1,16 @@
+<button mat-button [matMenuTriggerFor]="cadastroPessoas">Cadastro</button>
+
+<button mat-button [matMenuTriggerFor]="relatorio">Relatorio</button>
+
+<mat-menu #cadastroPessoas="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="pessoas">Pessoas</button>
+</mat-menu>
+
+<mat-menu #pessoas="matMenu">
+  <button mat-menu-item>Novo</button>
+  <button mat-menu-item>Procurar</button>
+</mat-menu>
+
+<mat-menu #relatorio="matMenu">
+  <button mat-menu-item>Relatorio Pessoas</button>
+</mat-menu>
