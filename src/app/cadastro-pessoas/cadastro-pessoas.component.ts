@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormControl, FormGroup } from '@angular/forms';
-import { ConfigService } from 'src/app/config.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
@@ -79,8 +78,9 @@ export class CadastroPessoasComponent implements OnInit {
     }
 
     cadastrar() {
-        alert('teste1');
-        this.http.post<string>('http://localhost:8080/bombeiros/pessoa', 'teste').subscribe(
+        //alert(JSON.stringify(this.form));
+
+        this.http.post<string>('http://localhost:8080/bombeiros/pessoa', this.form.value).subscribe(
             data => {
                 console.log("POST Request is successful ", data);
             },
@@ -89,6 +89,7 @@ export class CadastroPessoasComponent implements OnInit {
                 console.log("Error", error);
 
             });
+
         alert('teste2');
     }
 }
