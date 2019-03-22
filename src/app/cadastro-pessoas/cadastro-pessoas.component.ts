@@ -78,7 +78,6 @@ export class CadastroPessoasComponent implements OnInit {
     }
 
     cadastrar() {
-        //alert(JSON.stringify(this.form));
 
         this.http.post<string>('http://localhost:8080/bombeiros/pessoa', this.form.value).subscribe(
             data => {
@@ -90,13 +89,6 @@ export class CadastroPessoasComponent implements OnInit {
 
             });
 
-        alert('teste2');
+        alert('Cadastrado.');
     }
 }
-
-const httpOptions = {
-    headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'Authorization': 'my-auth-token'
-    })
-};

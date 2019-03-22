@@ -46,12 +46,16 @@ import {
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { CadastroPessoasComponent } from './cadastro-pessoas/cadastro-pessoas.component';
+import { ProcurarPessoasComponent } from './procurar-pessoas/procurar-pessoas.component';
+import { AtualizarPessoaComponent } from './atualizar-pessoa/atualizar-pessoa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    CadastroPessoasComponent
+    CadastroPessoasComponent,
+    ProcurarPessoasComponent,
+    AtualizarPessoaComponent
   ],
   imports: [
     HttpClientModule,

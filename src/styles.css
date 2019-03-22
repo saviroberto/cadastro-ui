@@ -22,3 +22,18 @@ body {
     border-radius: 10px;
   }
   
+  .cadastroDiv{
+    width: 100%;
+    display: table;
+    style:"display: table-row";
+}
+.pessoaDiv {
+    width: 600px;
+    display: table-cell;
+}
+.epiDiv {
+    display: table-cell;
+}
+p {
+    font-weight: bold;
+}
